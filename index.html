@@ -2,29 +2,34 @@
 <head>
 <script language="JavaScript">
 <!-- hide this script from old browsers
-function temp(form)
+function fare(form)
 {
-  var f = parseFloat(form.DegF.value, 10);
-  var c = 0;
-  c = (f - 32.0) * 5.0 / 9.0;
-  form.DegC.value = c;
+	var mile = parseFloat(form.miles.value, 10);
+	var time = parseFloat(form.time.value, 10);
+	var coef = 2.31;
+	var rate = 0;
+	rate = coef + ((1.65) * mile) + ((.22) * (time));
+	form.result.value = rate;
 }
 // done hiding from old browsers -->
 </script>
 </head>
 <body>
 <FORM>
-<h2>Fahrenheit to Celsius Converter</h2>
-Enter a temperature in degrees F: 
-<INPUT NAME="DegF" VALUE="0" MAXLENGTH="15" SIZE=15>
+<h2>*beta* Rideshare Calculator</h2>
+Enter a distance in miles: 
+<INPUT NAME="miles" VALUE="0" MAXLENGTH="15" SIZE=15>
+<p>
+Enter a time in minutes: 
+<INPUT NAME="time" VALUE="0" MAXLENGTH="15" SIZE=15>
 <p>
 Click this button to calculate the temperature 
 in degrees C:
 <INPUT NAME="calc" VALUE="Calculate" TYPE=BUTTON 
-onClick=temp(this.form)>
+onClick=fare(this.form)>
 <p>
-Temperature in degrees C is: 
-<INPUT NAME="DegC" READONLY SIZE=15>
+Fare estimation is: 
+<INPUT NAME="result" READONLY SIZE=15>
 </FORM>
 </body>
 </html>
