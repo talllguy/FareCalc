@@ -9,6 +9,7 @@ function fare(form)
 	var coef = 2.31;
 	var rate = 0;
 	rate = coef + ((1.65) * mile) + ((.22) * (time));
+	rate = Math.round(rate);
 	form.result.value = rate;
 }
 // done hiding from old browsers -->
@@ -23,7 +24,7 @@ Enter a distance in miles:
 Enter a time in minutes: 
 <INPUT NAME="time" VALUE="0" MAXLENGTH="15" SIZE=15>
 <p>
-Click this button to calculate the temperature 
+Click this button to calculate the estimated fare. 
 in degrees C:
 <INPUT NAME="calc" VALUE="Calculate" TYPE=BUTTON 
 onClick=fare(this.form)>
