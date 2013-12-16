@@ -47,19 +47,15 @@
 		</div>
 		<div class="one-third column">
 			<h3>Calculator</h3>
-			<p><FORM>
-			<label for="miles">Enter a distance in miles:</label>
-            <INPUT id="miles" VALUE="0" MAXLENGTH="15" SIZE=15 type=text /> 
-            <p>
-            <label for="time">Enter a time in minutes:</label>
-            <INPUT id="time" VALUE="0" MAXLENGTH="15" SIZE=15 type=text />
-            <p>
-            <INPUT id="calc" VALUE="Calculate" TYPE=button 
-            onClick=fare(this.form)>
-            <p>
-            <label for="result">Fare estimation is:</label>
-            <INPUT id="result" READONLY SIZE=15 type=text />
-        </FORM>
+			<FORM>
+			<p><label for="miles">Enter a distance in miles:</label>
+            		<INPUT id="miles" VALUE="" MAXLENGTH="15" SIZE=15 type=number /> </p>
+		        <p><label for="time">Enter a time in minutes:</label>
+		        <INPUT id="time" VALUE="" MAXLENGTH="15" SIZE=15 type=number /></p>
+			<p><INPUT id="calc" VALUE="Calculate" TYPE=button onClick=fare(this.form)></p>
+			<p><label for="result">Fare estimation is:</label>
+			<INPUT id="result" READONLY SIZE=15 type=text /></p>
+			</FORM>
 		</div>
 		<div class="one-third column">
 		<h3>Not affiliated with Lyft</h3>
