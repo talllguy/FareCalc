@@ -32,6 +32,10 @@
 	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	
+	<!-- Scripts
+	================================================== -->
+	<script src="js/fare.js"></script>
 
 </head>
 <body>
@@ -52,8 +56,6 @@
 		<div class="one-third column">
 			<h3>Calculator</h3>
 			<p><FORM>
-             
-
 			<label for="miles">Enter a distance in miles:</label>
             <INPUT id="miles" VALUE="0" MAXLENGTH="15" SIZE=15 type=text /> 
             <p>
@@ -63,7 +65,7 @@
             <INPUT id="calc" VALUE="Calculate" TYPE=submit 
             onClick=fare(this.form)>
             <p>
-            Fare estimation is: 
+            <label for="result">Fare estimation is: </label>
             <INPUT id="result" READONLY SIZE=15 type=text>
         </FORM>
         <p><h3>Not affiliated with Lyft</h3></p>
