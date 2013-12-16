@@ -42,29 +42,40 @@
 	<div class="container">
 		<div class="sixteen columns">
 			<h1 class="remove-bottom" style="margin-top: 40px">Lyft Fare Calculator</h1>
-			<h5>Beta</h5>
+			<h5>Beta <iframe src="http://ghbtns.com/github-btn.html?user=talllguy&repo=FareCalc&type=watch"
+  allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe></h5>
+			
 			<hr />
 		</div>
 		<div class="one-third column">
 			<h3>Calculator</h3>
-			<p><FORM>
-			<label for="miles">Enter a distance in miles:</label>
-            <INPUT id="miles" VALUE="0" MAXLENGTH="15" SIZE=15 type=text /> 
-            <p>
-            <label for="time">Enter a time in minutes:</label>
-            <INPUT id="time" VALUE="0" MAXLENGTH="15" SIZE=15 type=text />
-            <p>
-            <INPUT id="calc" VALUE="Calculate" TYPE=button 
-            onClick=fare(this.form)>
-            <p>
-            <label for="result">Fare estimation is:</label>
-            <INPUT id="result" READONLY SIZE=15 type=text />
-        </FORM>
+			<FORM>
+			<p><label for="miles">Enter a distance in miles:</label>
+            		<INPUT id="miles" VALUE="" MAXLENGTH="15" SIZE=15 type=number pattern="\d*" /> </p>
+		        <p><label for="time">Enter a time in minutes:</label>
+		        <INPUT id="time" VALUE="" MAXLENGTH="15" SIZE=15 type=number pattern="\d*" /></p>
+			<p><INPUT id="calc" VALUE="Calculate" TYPE=button onClick=fare(this.form)></p>
+			<p><label for="result">Fare estimation is:</label>
+			<INPUT id="result" READONLY SIZE=15 type=text /></p>
+			</FORM>
 		</div>
 		<div class="one-third column">
-		<h3>Not affiliated with Lyft</h3>
+		<h3>About</h3>
+		<h4>Unaffiliated with <a href="https://www.lyft.me/">Lyft</a>!</h4>
+		<p>This calculator estimates the cost of using Lyft if the distance and approximate time
+			are known.</p>
+		<p>Lyft does not publish its formula for determining a ride's donation amount. This 
+			calculator uses a formula based on observations and is not official.</p>
+		<p>Use <a href="https://maps.google.com">Google Maps</a> to determine distance and 
+			travel time if you're unsure.</p>
 		</div>
 		<div class="one-third column">
+		<h3>Author</h3>
+		<p><a href="http://about.me/elliottp">Elliott Plack</a> with function design by BL.</p>
+		<p><a href="https://twitter.com/TalllGuy" class="twitter-follow-button" data-show-count="false">Follow @TalllGuy</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
+		<p><iframe src="http://ghbtns.com/github-btn.html?user=talllguy&type=follow&count=true"
+  allowtransparency="true" frameborder="0" scrolling="0" width="165" height="20"></iframe></p>
 		</div>
 
 	</div><!-- container -->
