@@ -49,9 +49,9 @@
 			<h3>Calculator</h3>
 			<FORM>
 			<p><label for="miles">Enter a distance in miles:</label>
-            		<INPUT id="miles" VALUE="" MAXLENGTH="15" SIZE=15 type=number /> </p>
+            		<INPUT id="miles" VALUE="" MAXLENGTH="15" SIZE=15 type=number pattern="\d*" /> </p>
 		        <p><label for="time">Enter a time in minutes:</label>
-		        <INPUT id="time" VALUE="" MAXLENGTH="15" SIZE=15 type=number /></p>
+		        <INPUT id="time" VALUE="" MAXLENGTH="15" SIZE=15 type=number pattern="\d*" /></p>
 			<p><INPUT id="calc" VALUE="Calculate" TYPE=button onClick=fare(this.form)></p>
 			<p><label for="result">Fare estimation is:</label>
 			<INPUT id="result" READONLY SIZE=15 type=text /></p>
