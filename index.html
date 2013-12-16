@@ -1,96 +1,25 @@
 <html>
-<head>
-<script language="JavaScript">
-<!-- hide this script from old browsers
-function fare(form)
-{
-	var mile = parseFloat(form.miles.value, 10);
-	var time = parseFloat(form.time.value, 10);
-	var coef = 2.31;
-	var rate = 0;
-	rate = coef + ((1.65) * mile) + ((.22) * (time));
-	rate = Math.round(rate);
-	form.result.value = rate;
-}
-// done hiding from old browsers -->
-</script>
-<style>
-	/* Smartphones (portrait and landscape) ----------- */
-	@media only screen 
-	and (min-device-width : 320px) 
-	and (max-device-width : 480px) {
-	/* Styles */
-	}
-	
-	/* Smartphones (landscape) ----------- */
-	@media only screen 
-	and (min-width : 321px) {
-	/* Styles */
-	}
-	
-	/* Smartphones (portrait) ----------- */
-	@media only screen 
-	and (max-width : 320px) {
-	/* Styles */
-	}
-	
-	/* iPads (portrait and landscape) ----------- */
-	@media only screen 
-	and (min-device-width : 768px) 
-	and (max-device-width : 1024px) {
-	/* Styles */
-	}
-	
-	/* iPads (landscape) ----------- */
-	@media only screen 
-	and (min-device-width : 768px) 
-	and (max-device-width : 1024px) 
-	and (orientation : landscape) {
-	/* Styles */
-	}
-	
-	/* iPads (portrait) ----------- */
-	@media only screen 
-	and (min-device-width : 768px) 
-	and (max-device-width : 1024px) 
-	and (orientation : portrait) {
-	/* Styles */
-	}
-	
-	/* Desktops and laptops ----------- */
-	@media only screen 
-	and (min-width : 1224px) {
-	/* Styles */
-	}
-	
-	/* Large screens ----------- */
-	@media only screen 
-	and (min-width : 1824px) {
-	/* Styles */
-	}
-	
-	/* iPhone 4 ----------- */
-	@media
-	only screen and (-webkit-min-device-pixel-ratio : 1.5),
-	only screen and (min-device-pixel-ratio : 1.5) {
-	/* Styles */
-	}
-</style>
-</head>
-<body>
-<FORM>
-<h2>*beta* Rideshare Calculator</h2>
-Enter a distance in miles: 
-<INPUT NAME="miles" VALUE="0" MAXLENGTH="15" SIZE=15>
-<p>
-Enter a time in minutes: 
-<INPUT NAME="time" VALUE="0" MAXLENGTH="15" SIZE=15>
-<p>
-<INPUT NAME="calc" VALUE="Calculate" TYPE=BUTTON 
-onClick=fare(this.form)>
-<p>
-Fare estimation is: 
-<INPUT NAME="result" READONLY SIZE=15>
-</FORM>
-</body>
+	<head>
+		<title>Rideshare Calculator</title>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+		<meta charset="utf-8"><link rel="stylesheet" href="css/style.css" type="text/css">
+		<script src="js/fare.js"></script>
+	</head>
+	<body>
+		<FORM>
+			<h2>*beta* Lyft Donation Estimator</h2>
+			Enter a distance in miles: 
+			<INPUT NAME="miles" VALUE="0" MAXLENGTH="15" SIZE=15>
+			<p>
+			Enter a time in minutes: 
+			<INPUT NAME="time" VALUE="0" MAXLENGTH="15" SIZE=15>
+			<p>
+			<INPUT NAME="calc" VALUE="Calculate" TYPE=BUTTON 
+			onClick=fare(this.form)>
+			<p>
+			Fare estimation is: 
+			<INPUT NAME="result" READONLY SIZE=15>
+		</FORM>
+		<p><b>Not affiliated with Lyft</b></p>
+	</body>
 </html>
