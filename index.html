@@ -1,25 +1,82 @@
-<html>
-    <head>
-        <title>Rideshare Calculator</title>
-        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-        <meta charset="utf-8"><link rel="stylesheet" href="css/style.css" type="text/css">
-        <script src="js/fare.js"></script>
-    </head>
-    <body>
-        <FORM>
-            <h2>*beta* Lyft Donation Estimator</h2>
-            Enter a distance in miles: 
-            <INPUT NAME="miles" VALUE="0" MAXLENGTH="15" SIZE=15>
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Rideshare Calculator</title>
+	<meta name="description" content="Estimates the Lyft donation for a trip. Calculation functions by B.L.">
+	<meta name="author" content="Elliott Plack">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+</head>
+<body>
+
+
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+	<!-- Delete everything in this .container and get started on your own site! -->
+
+	<div class="container">
+		<div class="sixteen columns">
+			<h1 class="remove-bottom" style="margin-top: 40px">Lyft Fare Calculator</h1>
+			<h5>Beta</h5>
+			<hr />
+		</div>
+		<div class="one-third column">
+			<h3>Calculator</h3>
+			<p><FORM>
+             
+
+			<label for="miles">Enter a distance in miles:</label>
+            <INPUT id="miles" VALUE="0" MAXLENGTH="15" SIZE=15 type=text /> 
             <p>
-            Enter a time in minutes: 
-            <INPUT NAME="time" VALUE="0" MAXLENGTH="15" SIZE=15>
+            <label for="time">Enter a time in minutes:</label>
+            <INPUT id="time" VALUE="0" MAXLENGTH="15" SIZE=15 type=text />
             <p>
-            <INPUT NAME="calc" VALUE="Calculate" TYPE=BUTTON 
+            <INPUT id="calc" VALUE="Calculate" TYPE=submit 
             onClick=fare(this.form)>
             <p>
             Fare estimation is: 
-            <INPUT NAME="result" READONLY SIZE=15>
+            <INPUT id="result" READONLY SIZE=15 type=text>
         </FORM>
-        <p><b>Not affiliated with Lyft</b></p>
-    </body>
+        <p><h3>Not affiliated with Lyft</h3></p>
+		</div>
+		<div class="one-third column">
+		</div>
+		<div class="one-third column">
+		</div>
+
+	</div><!-- container -->
+
+
+<!-- End Document
+================================================== -->
+</body>
 </html>
