@@ -52,17 +52,24 @@
 		<div class="one-third column">
 			<h3>Calculator</h3>
 			<p><FORM>
+             
+
 			<label for="miles">Enter a distance in miles:</label>
-            <INPUT NAME="miles" VALUE="0" MAXLENGTH="15" SIZE=15 type=text /> 
+            <INPUT id="miles" VALUE="0" MAXLENGTH="15" SIZE=15 type=text /> 
             <p>
             <label for="time">Enter a time in minutes:</label>
-            <INPUT NAME="time" VALUE="0" MAXLENGTH="15" SIZE=15 type=text />
+            <INPUT id="time" VALUE="0" MAXLENGTH="15" SIZE=15 type=text />
             <p>
+<<<<<<< HEAD
             <INPUT NAME="calc" VALUE="Calculate" TYPE=button 
             onClick=fare(this.form) />
+=======
+            <INPUT id="calc" VALUE="Calculate" TYPE=submit 
+            onClick=fare(this.form)>
+>>>>>>> parent of 7acb083... debugging calculator
             <p>
-            <label for="result">Fare estimation is:</label>
-            <INPUT NAME="result" READONLY SIZE=15 />
+            Fare estimation is: 
+            <INPUT id="result" READONLY SIZE=15 type=text>
         </FORM>
 		</div>
 		<div class="one-third column">
