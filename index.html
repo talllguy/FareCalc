@@ -1,36 +1,76 @@
-<html>
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
-<script language="JavaScript">
-<!-- hide this script from old browsers
-function fare(form)
-{
-	var mile = parseFloat(form.miles.value, 10);
-	var time = parseFloat(form.time.value, 10);
-	var coef = 2.31;
-	var rate = 0;
-	rate = coef + ((1.65) * mile) + ((.22) * (time));
-	rate = Math.round(rate);
-	form.result.value = rate;
-}
-// done hiding from old browsers -->
-</script>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Rideshare Calculator</title>
+	<meta name="description" content="Estimates the Lyft donation for a trip. Calculation functions by B.L.">
+	<meta name="author" content="Elliott Plack">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	
+	<!-- Scripts
+	================================================== -->
+	<script src="js/fare.js"></script>
+
 </head>
 <body>
-<FORM>
-<h2>*beta* Rideshare Calculator</h2>
-Enter a distance in miles: 
-<INPUT NAME="miles" VALUE="0" MAXLENGTH="15" SIZE=15>
-<p>
-Enter a time in minutes: 
-<INPUT NAME="time" VALUE="0" MAXLENGTH="15" SIZE=15>
-<p>
-Click this button to calculate the estimated fare. 
-in degrees C:
-<INPUT NAME="calc" VALUE="Calculate" TYPE=BUTTON 
-onClick=fare(this.form)>
-<p>
-Fare estimation is: 
-<INPUT NAME="result" READONLY SIZE=15>
-</FORM>
+	<div class="container">
+		<div class="sixteen columns">
+			<h1 class="remove-bottom" style="margin-top: 40px">Lyft Fare Calculator</h1>
+			<h5>Beta</h5>
+			<hr />
+		</div>
+		<div class="one-third column">
+			<h3>Calculator</h3>
+			<p><FORM>
+			<label for="miles">Enter a distance in miles:</label>
+            <INPUT id="miles" VALUE="0" MAXLENGTH="15" SIZE=15 type=text /> 
+            <p>
+            <label for="time">Enter a time in minutes:</label>
+            <INPUT id="time" VALUE="0" MAXLENGTH="15" SIZE=15 type=text />
+            <p>
+            <INPUT id="calc" VALUE="Calculate" TYPE=button 
+            onClick=fare(this.form)>
+            <p>
+            <label for="result">Fare estimation is:</label>
+            <INPUT id="result" READONLY SIZE=15 type=text />
+        </FORM>
+		</div>
+		<div class="one-third column">
+		<h3>Not affiliated with Lyft</h3>
+		</div>
+		<div class="one-third column">
+		</div>
+
+	</div><!-- container -->
+
+
+<!-- End Document
+================================================== -->
 </body>
 </html>
