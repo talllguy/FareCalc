@@ -52,19 +52,17 @@
 		<div class="one-third column">
 			<h3>Calculator</h3>
 			<p><FORM>
-             
-
 			<label for="miles">Enter a distance in miles:</label>
-            <INPUT id="miles" VALUE="0" MAXLENGTH="15" SIZE=15 type=text /> 
+            <INPUT NAME="miles" VALUE="0" MAXLENGTH="15" SIZE=15 type=text /> 
             <p>
             <label for="time">Enter a time in minutes:</label>
-            <INPUT id="time" VALUE="0" MAXLENGTH="15" SIZE=15 type=text />
+            <INPUT NAME="time" VALUE="0" MAXLENGTH="15" SIZE=15 type=text />
             <p>
-            <INPUT id="calc" VALUE="Calculate" TYPE=submit 
+            <INPUT NAME="calc" VALUE="Calculate" TYPE=submit 
             onClick=fare(this.form)>
             <p>
-            Fare estimation is: 
-            <INPUT id="result" READONLY SIZE=15 type=text>
+            <label for="result">Fare estimation is:</label>
+            <INPUT NAME="result" READONLY SIZE=15 />
         </FORM>
         <p><h3>Not affiliated with Lyft</h3></p>
 		</div>
