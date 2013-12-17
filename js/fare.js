@@ -6,5 +6,6 @@ function fare(form)
 	var rate = 0;
 	rate = coef + ((1.65) * mile) + ((.22) * (time));
 	rate = Math.round(rate);
+	rate = "$" + rate;
 	form.result.value = rate;
 }
